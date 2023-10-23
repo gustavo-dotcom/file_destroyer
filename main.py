@@ -14,7 +14,7 @@ def find(pattern, path):
     for root, dirs, files in os.walk(path):
         for name in files:
             if fnmatch.fnmatch(name, pattern):
-                files.append(os.path.join(root, name))
+                files_found.append(os.path.join(root, name))
     return files_found
 
 
